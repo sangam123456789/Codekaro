@@ -75,9 +75,19 @@ WSGI_APPLICATION = 'Codekaro.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'containers-us-west-101.railway.app',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'xsXWpwCklC4ePTOii9eq',
+        'PORT': '6542',
+
     }
 }
 
