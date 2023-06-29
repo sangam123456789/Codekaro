@@ -1,1 +1,0 @@
-web: gunicorn Codekaro.wsgi --log-file-
