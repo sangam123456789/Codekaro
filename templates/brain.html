@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<div class="container-fluid" style = "margin-top : 100px; margin-bottom : 30px;">
+<div class="container-fluid" style = "margin-top : 30px; margin-bottom : 30px;">
 	<div class="row">
 		<div class="col-sm-12">
 			<div id="inam" class="carousel slide" data-ride="carousel">
@@ -17,7 +17,7 @@
 						 		
                                 {% for i in questions|slice:"0:" %}
                                 
-                                    <div class="col-sm-12 col-lg-4">
+                                    <div class="col-sm-18 col-lg-6">
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb">
                                               <li class="breadcrumb-item"><a href="{{i.link}}" target = "_blank">{{i.name}}</a></li>
@@ -27,7 +27,7 @@
                                         
                                     </div>
                                     
-                                    {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+                                    {% if forloop.counter|divisibleby:20 and forloop.counter > 0 and not forloop.last %}
                                         </div>
                                         </div>
                                         </div>
@@ -46,10 +46,10 @@
                     
                             
 				</div>
-				<a href="#inam" class="carousel-control-prev" data-slide="prev">
+				<a href="#inam" class="carousel-control-prev" style = "margin-top:200px; padding-right:40px;" data-slide="prev">
 					<span class="carousel-control-prev-icon" style = "background-color : blue;"></span>
 				</a>
-				<a href="#inam" class="carousel-control-next" data-slide="next">
+				<a href="#inam" class="carousel-control-next" style = "margin-top:200px; padding-left:40px;" data-slide="next">
 					<span class="carousel-control-next-icon" style = "background-color : blue;"></span>
 				</a>
 				
