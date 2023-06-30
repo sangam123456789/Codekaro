@@ -2,120 +2,139 @@ from django.db import models
 
 # Create your models here.
 class brain(models.Model):
+    order = models.CharField(max_length=20,default="1")
+    ordint = models.IntegerField(default = 1)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
+
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class beginner(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class brute(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class greed(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class sub(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class implement(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class sort(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class binary(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class pointer(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class hash(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class pair(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class dpstand(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class dp(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class tree(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class graph(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class dsu(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()
     def __str__(self):
-        return self.name
+        return self.order + "   " + self.name
 
 class segtree(models.Model):
+    order = models.CharField(max_length=20 , default="1")
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=50)
     link = models.URLField()        
     def __str__(self) :
-        return self.name
+        return self.order + "   " + self.name

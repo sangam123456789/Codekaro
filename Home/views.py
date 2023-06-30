@@ -6,54 +6,87 @@ def home(request):
     return render(request , 'base.html')
 
 def brainf(request):
-    brains = brain.objects.all()
+    brains = brain.objects.all().order_by('order')
     params = {'questions' : brains}
     return render(request , 'brain.html' , params)
 
 def beginnerf(request):
-    return render(request , 'base.html')
+    beginners = beginner.objects.all().order_by('order')
+    params = {'questions' : beginners}
+    return render(request , 'brain.html' , params)
 
 def brutef(request):
-    return render(request , 'base.html')
+    brutes = brute.objects.all().order_by('order')
+    
+    params = {'questions' : brutes}
+    return render(request , 'brain.html' , params)
 
 def greedf(request):
-    return render(request , 'base.html')
+    greeds = greed.objects.all().order_by('order')
+    params = {'questions' : greeds}
+    return render(request , 'brain.html' , params)
 
 def subf(request):
-    return render(request , 'base.html')
+    subs = sub.objects.all().order_by('order')
+    params = {'questions' : subs}
+    return render(request , 'brain.html' , params)
 
 def implementf(request):
-    return render(request , 'base.html')
+    implements = implement.objects.all().order_by('order')
+    params = {'questions' : implements}
+    return render(request , 'brain.html' , params)
 
 def sortf(request):
-    return render(request , 'base.html')
+    sorts = sort.objects.all().order_by('order')
+    params = {'questions' : sorts}
+    return render(request , 'brain.html' , params)
 
 def binaryf(request):
-    return render(request , 'base.html')
+    binaries = binary.objects.all().order_by('order')
+    params = {'questions' : binaries}
+    return render(request , 'brain.html' , params)
 
 def pointerf(request):
-    return render(request , 'base.html')
+    pointers = pointer.objects.all().order_by('order')
+    params = {'questions' : pointers}
+    return render(request , 'brain.html' , params)
 
 def hashf(request):
-    return render(request , 'base.html')
+    hashs = hash.objects.all().order_by('order')
+    params = {'questions' : hashs}
+    return render(request , 'brain.html' , params)
 
 def pairf(request):
-    return render(request , 'base.html')
+    pairs = pair.objects.all().order_by('order')
+    params = {'questions' : pairs}
+    return render(request , 'brain.html' , params)
 
 def dpstandf(request):
-    return render(request , 'base.html')
+    dpstands = dpstand.objects.all().order_by('order')
+    params = {'questions' : dpstands}
+    return render(request , 'brain.html' , params)
 
 def dpf(request):
-    return render(request , 'base.html')
+    dps = dp.objects.all().order_by('order')
+    params = {'questions' : dps}
+    return render(request , 'brain.html' , params)
 
 def treef(request):
-    return render(request , 'base.html')
+    trees = tree.objects.all().order_by('order')
+    params = {'questions' : trees}
+    return render(request , 'brain.html' , params)
 
 def graphf(request):
-    return render(request , 'base.html')
+    graphs = graph.objects.all().order_by('order')
+    params = {'questions' : graphs}
+    return render(request , 'brain.html' , params)
 
 def dsuf(request):
-    return render(request , 'base.html')
+    dsus = dsu.objects.all().order_by('order')
+    params = {'questions' : dsus}
+    return render(request , 'brain.html' , params)
 
 def segtreef(request):
-    return render(request , 'base.html')
+    segtrees = segtree.objects.all().order_by('order')
+    params = {'questions' : segtrees}
+    return render(request , 'brain.html' , params)

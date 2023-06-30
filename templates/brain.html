@@ -19,9 +19,17 @@
                                 
                                     <div class="col-sm-18 col-lg-6">
                                         <nav aria-label="breadcrumb">
-                                            <ol class="breadcrumb">
-                                              <li class="breadcrumb-item"><a href="{{i.link}}" target = "_blank">{{i.name}}</a></li>
-                                              <li class="breadcrumb-item active" aria-current="page">{{i.description}}</li>
+                                            <ol class="breadcrumb  btn-warning">
+                                              <li class="breadcrumb-item">
+												<div style="width : 440px;">
+												<a  href="{{i.link}}" target = "_blank">{{i.name}}</a>
+												</div>		
+											  </li>
+                                              {% comment %} <li class="breadcrumb-item active" aria-current="page">{{i.description}}</li> {% endcomment %}
+											  <button type="button" style = "padding-top :1px; padding-bottom:1px;" class="btn btn-secondary" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="{{i.description}}">
+												Hint?
+											  </button>
+											  
                                             </ol>
                                           </nav>
                                         
@@ -65,5 +73,4 @@
 
 
 {% endblock body %}
-
 
