@@ -1,57 +1,59 @@
 from django.shortcuts import render , HttpResponse
 from .models import *
-
+from Codekaro import settings
 # Create your views here.
 def home(request):
     return render(request , 'base.html')
 
-def brain(request):
+def brainf(request):
+    brains = brain.objects.all()
+    params = {'questions' : brains}
+    return render(request , 'brain.html' , params)
+
+def beginnerf(request):
     return render(request , 'base.html')
 
-def beginner(request):
+def brutef(request):
     return render(request , 'base.html')
 
-def brute(request):
+def greedf(request):
     return render(request , 'base.html')
 
-def greed(request):
+def subf(request):
     return render(request , 'base.html')
 
-def sub(request):
+def implementf(request):
     return render(request , 'base.html')
 
-def implement(request):
+def sortf(request):
     return render(request , 'base.html')
 
-def sort(request):
+def binaryf(request):
     return render(request , 'base.html')
 
-def binary(request):
+def pointerf(request):
     return render(request , 'base.html')
 
-def pointer(request):
+def hashf(request):
     return render(request , 'base.html')
 
-def hash(request):
+def pairf(request):
     return render(request , 'base.html')
 
-def pair(request):
+def dpstandf(request):
     return render(request , 'base.html')
 
-def dpstand(request):
+def dpf(request):
     return render(request , 'base.html')
 
-def dp(request):
+def treef(request):
     return render(request , 'base.html')
 
-def tree(request):
+def graphf(request):
     return render(request , 'base.html')
 
-def graph(request):
+def dsuf(request):
     return render(request , 'base.html')
 
-def dsu(request):
-    return render(request , 'base.html')
-
-def segtree(request):
+def segtreef(request):
     return render(request , 'base.html')
