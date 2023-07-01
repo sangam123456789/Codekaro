@@ -19,6 +19,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+# Use sendmail as email backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gaurav.singh911805@gmail.com'
+EMAIL_HOST_PASSWORD = 'izbhjyvwtmggizwx'
+
+
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-xcr5-mcm&i9a9cl-!i(14syzp6kjp6!s3#jq34=kkngqui_1$n'
 
@@ -33,6 +43,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'Home',
     'django.contrib.admin',
+    'django.contrib',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

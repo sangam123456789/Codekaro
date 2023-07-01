@@ -72,10 +72,27 @@
             </li>
 
           </ul>
+
+          <li class="nav-item {% block signinactive %}{% endblock signinactive %}">
+            <a class="nav-link " href="/signin">Sign in</a>
+          </li>
+
+          <li class="nav-item {% block signupactive %}{% endblock signupactive %}">
+            <a class="nav-link " href="/signup">Sign Up</a>
+          </li>
+
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
+
+          {% if user.is_authenticated %}
+            <form class="form-inline my-2 my-lg-0" action = "\signout" method = "post">
+              {% csrf_token %}
+              <button class="btn btn-outline-danger my-2 my-sm-0 mx-2" type="submit">Logout ({{user.username}})</button>
+            </form>
+          {% endif %}  
+
         </div>
       </nav>
 
