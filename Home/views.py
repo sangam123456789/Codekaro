@@ -13,7 +13,12 @@ from django.contrib import messages
 from django.shortcuts import redirect
 # Create your views here.
 def home(request):
-    return render(request , 'base.html')
+    return render(request , 'home.html')
+
+def templates(request):
+    return render(request , 'templates.html')
+
+
 
 def signout(request):
     context = {'log' : False}

@@ -10,6 +10,7 @@ urlpatterns =[
     path('signout', views.signout , name = 'signout'),
     path('signin', views.signin , name = 'signin'),
     path('signup', views.signup , name = 'signup'),
+    path('templates', views.templates , name = 'templates'),
     path('activate/<uidb64>/<token>', views.activate, name='activate'),
     path('Brain', views.brainf , name = 'brainf'),
     path('Recursion', views.recursionf , name = 'recursionf'),
