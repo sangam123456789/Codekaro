@@ -70,16 +70,19 @@
                 <a class="dropdown-item" href="/Segtree">Segment Tree</a>
               </div>
             </li>
+            
+            <li class="nav-item {% block signinactive %}{% endblock signinactive %}">
+              <a class="nav-link" href="/signin">Signin</a>
+            </li>
+  
+            <li class="nav-item {% block signupactive %}{% endblock signupactive %}">
+              <a class="nav-link" href="/signup">Signup</a>
+            </li>
+
 
           </ul>
 
-          <li class="nav-item {% block signinactive %}{% endblock signinactive %}">
-            <a class="nav-link " href="/signin">Sign in</a>
-          </li>
-
-          <li class="nav-item {% block signupactive %}{% endblock signupactive %}">
-            <a class="nav-link " href="/signup">Sign Up</a>
-          </li>
+          
 
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
