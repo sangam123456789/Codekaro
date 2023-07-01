@@ -121,6 +121,11 @@ def brainf(request):
     params = {'questions' : brains}
     return render(request , 'brain.html' , params)
 
+def recursionf(request):
+    recursions = recursion.objects.all().order_by('order')
+    params = {'questions' : recursions}
+    return render(request , 'brain.html' , params)
+
 def beginnerf(request):
     beginners = beginner.objects.all().order_by('order')
     params = {'questions' : beginners}

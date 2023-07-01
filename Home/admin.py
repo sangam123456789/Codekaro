@@ -18,4 +18,4 @@ admin.site.register(tree)
 admin.site.register(graph)
 admin.site.register(dsu)
 admin.site.register(segtree)
-
+admin.site.register(recursion)
