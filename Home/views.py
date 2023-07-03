@@ -20,6 +20,7 @@ def templates(request):
 
 
 
+
 def signout(request):
     context = {'log' : False}
     if request.method == "POST" :
