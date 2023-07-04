@@ -1,9 +1,10 @@
 from django.db import models
 
+
 # Create your models here.
 class brain(models.Model):
     order = models.CharField(max_length=20,default="1")
-    ordint = models.IntegerField(default = 1)
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -13,7 +14,7 @@ class brain(models.Model):
     
 class recursion(models.Model):
     order = models.CharField(max_length=20,default="1")
-    ordint = models.IntegerField(default = 1)
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -23,6 +24,7 @@ class recursion(models.Model):
 
 class beginner(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -31,6 +33,7 @@ class beginner(models.Model):
 
 class brute(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -39,6 +42,7 @@ class brute(models.Model):
 
 class greed(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -47,6 +51,7 @@ class greed(models.Model):
 
 class sub(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -55,6 +60,7 @@ class sub(models.Model):
 
 class implement(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -63,6 +69,7 @@ class implement(models.Model):
 
 class sort(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -71,6 +78,7 @@ class sort(models.Model):
 
 class binary(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -79,6 +87,7 @@ class binary(models.Model):
 
 class pointer(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -87,6 +96,7 @@ class pointer(models.Model):
 
 class hash(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -95,6 +105,7 @@ class hash(models.Model):
 
 class pair(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -103,6 +114,7 @@ class pair(models.Model):
 
 class dpstand(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -111,6 +123,7 @@ class dpstand(models.Model):
 
 class dp(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -119,6 +132,7 @@ class dp(models.Model):
 
 class tree(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -127,6 +141,7 @@ class tree(models.Model):
 
 class graph(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -135,6 +150,7 @@ class graph(models.Model):
 
 class dsu(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()
@@ -143,6 +159,7 @@ class dsu(models.Model):
 
 class segtree(models.Model):
     order = models.CharField(max_length=20 , default="1")
+    
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=150 , default="Do it yourself!")
     link = models.URLField()        

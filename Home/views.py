@@ -11,7 +11,13 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_bytes, force_text
 from django.contrib import messages
 from django.shortcuts import redirect
+from user_agents import parse
+from django.db.models import IntegerField
+from django.db.models.functions import Cast
 # Create your views here.
+
+
+
 def home(request):
     return render(request , 'home.html')
 
@@ -123,92 +129,184 @@ def signin(request):
     return render(request , 'signin.html')    
 
 def brainf(request):
-    brains = brain.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    
+    brains = sorted(brain.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : brains}
-    return render(request , 'brain.html' , params)
 
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+    
 def recursionf(request):
-    recursions = recursion.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+
+    recursions = sorted(recursion.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : recursions}
-    return render(request , 'brain.html' , params)
+    
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
 
 def beginnerf(request):
-    beginners = beginner.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    beginners = sorted(beginner.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : beginners}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def brutef(request):
-    brutes = brute.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    brutes = sorted(brute.objects.all() , key=lambda obj: int(obj.order))
     
     params = {'questions' : brutes}
-    return render(request , 'brain.html' , params)
+    
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
 
 def greedf(request):
-    greeds = greed.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    greeds = sorted(greed.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : greeds}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def subf(request):
-    subs = sub.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    subs = sorted(sub.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : subs}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def implementf(request):
-    implements = implement.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    implements = sorted(implement.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : implements}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def sortf(request):
-    sorts = sort.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    sorts = sorted(sort.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : sorts}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def binaryf(request):
-    binaries = binary.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    binaries = sorted(binary.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : binaries}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def pointerf(request):
-    pointers = pointer.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    pointers = sorted(pointer.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : pointers}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def hashf(request):
-    hashs = hash.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    hashs = sorted(hash.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : hashs}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def pairf(request):
-    pairs = pair.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    pairs = sorted(pair.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : pairs}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def dpstandf(request):
-    dpstands = dpstand.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    dpstands = sorted(dpstand.objects.all(), key=lambda obj: int(obj.order))
     params = {'questions' : dpstands}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def dpf(request):
-    dps = dp.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    dps = sorted(dp.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : dps}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def treef(request):
-    trees = tree.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    trees = sorted(tree.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : trees}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def graphf(request):
-    graphs = graph.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    graphs = sorted(graph.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : graphs}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def dsuf(request):
-    dsus = dsu.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    dsus = sorted(dsu.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : dsus}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+
 
 def segtreef(request):
-    segtrees = segtree.objects.all().order_by('order')
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    segtrees = sorted(segtree.objects.all() , key=lambda obj: int(obj.order))
     params = {'questions' : segtrees}
-    return render(request , 'brain.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
+    
