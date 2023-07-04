@@ -19,14 +19,14 @@
                                 
                                     <div class="col-sm-18 col-lg-6">
                                         <nav aria-label="breadcrumb">
-                                            <ol class="breadcrumb  btn-warning border border-dark breadphoneme" style = "margin-bottom:0.3rem;">
+                                            <ol class="breadcrumb  btn-warning border border-dark breadphoneme">
                                               <li class="breadcrumb-item">
 												<div style="width : 200px;">
 												<a  href="{{i.link}}" target = "_blank">{{forloop.counter}}.  {{i.name}}</a>
 												</div>		
 											  </li>
                                               {% comment %} <li class="breadcrumb-item active" aria-current="page">{{i.description}}</li> {% endcomment %}
-											  <button type="button" style = "padding-top :1px; padding-bottom:1px;" class="btn btn-secondary hintphoneme"  data-container="body" data-toggle="popover" data-placement="top" data-content="{{i.description}}">
+											  <button type="button" style = "margin-top:2px;padding-top :0px; padding-bottom:24px;height:23px;" class="btn btn-secondary hintphoneme"  data-container="body" data-toggle="popover" data-placement="top" data-content="{{i.description}}">
 												Hint?
 											  </button>
 											  
@@ -35,7 +35,7 @@
                                         
                                     </div>
                                     
-                                    {% if forloop.counter|divisibleby:10 and forloop.counter > 0 and not forloop.last %}
+                                    {% if forloop.counter|divisibleby:15 and forloop.counter > 0 and not forloop.last %}
                                         </div>
                                         </div>
                                         </div>
