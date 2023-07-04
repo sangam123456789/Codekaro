@@ -30,5 +30,6 @@ urlpatterns =[
     path('Graph', views.graphf , name = 'graphf'),
     path('DSU', views.dsuf , name = 'dsuf'),
     path('Segtree', views.segtreef , name = 'segtreef'),
+    path('Mixed', views.mixedf , name = 'mixedf'),
 ]
  

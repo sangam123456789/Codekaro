@@ -310,3 +310,12 @@ def segtreef(request):
     else :
         return render(request , 'brain.html' , params)
     
+
+def mixedf(request):
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    mixes = sorted(mixed.objects.all() , key=lambda obj: int(obj.order))
+    params = {'questions' : mixes}
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)
