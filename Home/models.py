@@ -175,3 +175,26 @@ class mixed(models.Model):
 
     def __str__(self):
         return self.order + "   " + self.name  
+
+
+class add(models.Model):
+  
+    name = models.CharField(max_length=30)
+    description = models.TextField(max_length=150 , default="Do it yourself!")
+    email = models.EmailField()
+    link = models.URLField()
+
+    def __str__(self):
+        return self.name  
+
+
+class bit(models.Model):
+    order = models.CharField(max_length=20,default="1")
+    
+    name = models.CharField(max_length=30)
+    description = models.TextField(max_length=150 , default="Do it yourself!")
+    link = models.URLField()
+
+    def __str__(self):
+        return self.order + "   " + self.name  
+    
