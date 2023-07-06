@@ -24,7 +24,20 @@ def home(request):
 def templates(request):
     return render(request , 'templates.html')
 
+def addf(request):
+    context = {'success' : False}
+    if request.method == "POST" :
+        name = request.POST['name']
+        email = request.user.email
+        description = request.POST['desc']
+        link = request.POST['link']
 
+        ins = add(name = name , email = email , description = description , link = link)
+        ins.save()
+        user = request.user.username
+        context = {'success' :True , 'username' : user}
+        return render(request , 'Addprob.html' , context)
+    return render(request , 'Addprob.html' , context)
 
 
 def signout(request):

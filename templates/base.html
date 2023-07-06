@@ -168,14 +168,19 @@
               </div>
             </li>
             
-            <li class="nav-item {% block signinactive %}{% endblock signinactive %}">
-              <a class="nav-link" href="/signin">Signin</a>
+            <li class="nav-item dropdown {% block dropactive4 %}{% endblock dropactive4 %}">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/signin">Signin</a>
+                <a class="dropdown-item" href="/signup">Signup</a>
+              </div>
             </li>
-  
-            <li class="nav-item {% block signupactive %}{% endblock signupactive %}">
-              <a class="nav-link" href="/signup">Signup</a>
+            
+            <li class="nav-item {% block addactive %}{% endblock addactive %}">
+              <a class="nav-link" href="/Add"> Add  <span class="sr-only">(current)</span></a>
             </li>
-
 
           </ul>
 
