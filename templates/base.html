@@ -22,10 +22,7 @@
           font-size: 14px;
         }
         
-        .activ{
-          border-bottom: 2px solid #ffffff;
-          border-radius:0px;
-        }
+        
         .homestyle{
           margin-left:20px; margin-top:10px;
         }  
@@ -90,6 +87,7 @@
         .activ{
           border-bottom: 2px solid #ffffff;
           border-radius:0px;
+          height : 32px;
         }
         .homestyle{
           margin-left:20px; margin-top:10px;
@@ -120,6 +118,13 @@
         .carousel-control-next{
           width:140px; margin-top:170px; padding-left:40px; height:350px;position:fixed;
         }
+
+        .licl{
+          height : 34px; margin-top : -9px;
+        }
+        .acl{
+          margin-top: 13px;padding-top: 3px;
+        }
       }
     </style>
 
@@ -140,15 +145,15 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item" style = "height : 34px; margin-top : -9px;">
-              <div class = "{% block homeactive %}{% endblock homeactive %}" style = "height : 32px;">
-                <a class="nav-link" style = "margin-top: 13px;padding-top: 3px;" href="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item licl">
+              <div class = "{% block homeactive %}{% endblock homeactive %}">
+                <a class="nav-link acl" href="/">Home <span class="sr-only">(current)</span></a>
               </div>
             </li>
 
-            <li class="nav-item" style = "height : 34px; margin-top : -9px;">
-              <div class = "{% block templateactive %}{% endblock templateactive %}" style = "height : 32px;">
-                <a class="nav-link" style = "margin-top: 13px;padding-top: 3px;" href="/templates">Templates <span class="sr-only">(current)</span></a>
+            <li class="nav-item licl">
+              <div class = "{% block templateactive %}{% endblock templateactive %}">
+                <a class="nav-link acl" href="/templates">Templates <span class="sr-only">(current)</span></a>
               </div>
               </li>
             <li class="nav-item dropdown {% block dropactive %}{% endblock dropactive %}">
@@ -203,9 +208,9 @@
               </div>
             </li>
             
-            <li class="nav-item" style = "height : 34px; margin-top : -9px;">
-              <div class = "{% block addactive %}{% endblock addactive %}" style = "height : 32px;">
-                <a class="nav-link" style = "margin-top: 13px;padding-top: 3px;" href="/Add"> Add  <span class="sr-only">(current)</span></a>
+            <li class="nav-item licl">
+              <div class = "{% block addactive %}{% endblock addactive %}">
+                <a class="nav-link acl" href="/Add"> Add  <span class="sr-only">(current)</span></a>
               </div>  
               </li>
 
