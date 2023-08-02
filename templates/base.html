@@ -21,7 +21,10 @@
         body {
           font-size: 14px;
         }
-
+        
+        .activ{
+          border-bottom: 2px solid #000;
+        }
         .homestyle{
           margin-left:20px; margin-top:10px;
         }  
@@ -82,6 +85,11 @@
           font-size: 16px;
         }
         
+       
+        .activ{
+          border-bottom: 2px solid #ffffff;
+          border-radius:0px;
+        }
         .homestyle{
           margin-left:20px; margin-top:10px;
         } 
@@ -120,7 +128,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style = "background-color:#c4cef3;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style = "background-color:#c4cef3; padding:2px;">
       <a class="navbar-brand" href="#">
         <img src="{% static 'logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
         codesniper
@@ -131,13 +139,17 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item {% block homeactive %}{% endblock homeactive %}">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item" style = "height : 34px; margin-top : -9px;">
+              <div class = "{% block homeactive %}{% endblock homeactive %}" style = "height : 32px;">
+                <a class="nav-link" style = "margin-top: 13px;padding-top: 3px;" href="/">Home <span class="sr-only">(current)</span></a>
+              </div>
             </li>
 
-            <li class="nav-item {% block templateactive %}{% endblock templateactive %}">
-              <a class="nav-link" href="/templates">Templates <span class="sr-only">(current)</span></a>
-            </li>
+            <li class="nav-item" style = "height : 34px; margin-top : -9px;">
+              <div class = "{% block templateactive %}{% endblock templateactive %}" style = "height : 32px;">
+                <a class="nav-link" style = "margin-top: 13px;padding-top: 3px;" href="/templates">Templates <span class="sr-only">(current)</span></a>
+              </div>
+              </li>
             <li class="nav-item dropdown {% block dropactive %}{% endblock dropactive %}">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Starters
@@ -190,9 +202,11 @@
               </div>
             </li>
             
-            <li class="nav-item {% block addactive %}{% endblock addactive %}">
-              <a class="nav-link" href="/Add"> Add  <span class="sr-only">(current)</span></a>
-            </li>
+            <li class="nav-item" style = "height : 34px; margin-top : -9px;">
+              <div class = "{% block addactive %}{% endblock addactive %}" style = "height : 32px;">
+                <a class="nav-link" style = "margin-top: 13px;padding-top: 3px;" href="/Add"> Add  <span class="sr-only">(current)</span></a>
+              </div>  
+              </li>
 
           </ul>
 
