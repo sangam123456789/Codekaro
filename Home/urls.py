@@ -32,5 +32,6 @@ urlpatterns =[
     path('DSU', views.dsuf , name = 'dsuf'),
     path('Segtree', views.segtreef , name = 'segtreef'),
     path('Mixed', views.mixedf , name = 'mixedf'),
+    path('Search', views.searchf , name = 'searchf'),
 ]
  

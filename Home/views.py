@@ -36,6 +36,7 @@ def home(request):
     visits = {'vis' : variable.variable_value}
     return render(request , 'home.html' , visits)
 
+
 def templates(request):
     return render(request , 'templates.html')
 
@@ -155,6 +156,37 @@ def signin(request):
             return render(request , 'signin.html' , context)
         
     return render(request , 'signin.html')    
+
+
+def searchf(request) :
+    query = request.GET['search']
+
+    brains = list(brain.objects.all())
+    recursions = list(recursion.objects.all())
+    beginners = list(beginner.objects.all())
+    greeds = list(greed.objects.all())
+    brutes = list(brute.objects.all())
+    subs = list(sub.objects.all())
+    implements = list(implement.objects.all())
+    sorts = list(sort.objects.all())
+    binaries = list(binary.objects.all())
+    pointers = list(pointer.objects.all())
+    hashs = list(hash.objects.all())
+    pairs = list(pair.objects.all())
+    dpstands = list(dpstand.objects.all())
+    dps = list(dp.objects.all())
+    trees = list(tree.objects.all())
+    graphs = list(graph.objects.all())
+    dsus = list(dsu.objects.all())
+    segtrees = list(segtree.objects.all())
+    mixes = list(mixed.objects.all())
+    all_objects = brains + recursions + beginners + greeds + brutes + subs + implements + sorts + binaries + pointers + hashs + pairs + dpstands + dps + trees + graphs + dsus + segtrees + mixes
+    all_objects = sorted(all_objects, key=lambda obj: int(obj.order))
+
+    filtered = [obj for obj in all_objects if obj.name.startswith(query)]
+    params = {'questions' : filtered}
+    return render(request , 'search.html' , params)
+
 
 def brainf(request):
     user_agent = parse(request.META['HTTP_USER_AGENT'])
