@@ -19,7 +19,9 @@ from django.db.models.functions import Cast
 
 
 def home(request):
-    return render(request , 'home.html')
+    visit_count = request.session.get('visit_count', 0)
+    visits = {'vis' : visit_count}
+    return render(request , 'home.html' , visits)
 
 def templates(request):
     return render(request , 'templates.html')

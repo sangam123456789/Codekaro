@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'Home.middleware.VisitorCounterMiddleware',
 ]
 
 ROOT_URLCONF = 'Codekaro.urls'
@@ -122,6 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
