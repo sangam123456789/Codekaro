@@ -2,6 +2,11 @@ from django.db import models
 
 
 # Create your models here.
+class GlobalVariable(models.Model):
+    variable_name = models.CharField(max_length=50, unique=True , default="visit")
+    variable_value = models.IntegerField(default=0)
+
+
 class brain(models.Model):
     order = models.CharField(max_length=20,default="1")
     

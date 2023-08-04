@@ -19,8 +19,21 @@ from django.db.models.functions import Cast
 
 
 def home(request):
-    visit_count = request.session.get('visit_count', 0)
-    visits = {'vis' : visit_count}
+    variable_name = 'visit_count'  # Assuming 'visit_count' is the variable you want to increase
+    try:
+        # Try to get the variable from the database
+        variable = GlobalVariable.objects.get(variable_name=variable_name)
+
+        # Increment the value
+        variable.variable_value += 1
+
+    except GlobalVariable.DoesNotExist:
+        # If the variable doesn't exist in the database, create a new record
+        variable = GlobalVariable(variable_name=variable_name, variable_value=1)
+
+    variable.save()  # Save the changes to the database
+
+    visits = {'vis' : variable.variable_value}
     return render(request , 'home.html' , visits)
 
 def templates(request):
