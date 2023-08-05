@@ -25,7 +25,10 @@ def home(request):
         variable = GlobalVariable.objects.get(variable_name=variable_name)
 
         # Increment the value
-        variable.variable_value += 1
+        if User.is_superuser :
+            variable.variable_value += 0
+        else:    
+            variable.variable_value += 1
 
     except GlobalVariable.DoesNotExist:
         # If the variable doesn't exist in the database, create a new record
@@ -182,10 +185,14 @@ def searchf(request) :
     mixes = list(mixed.objects.all())
     all_objects = brains + recursions + beginners + greeds + brutes + subs + implements + sorts + binaries + pointers + hashs + pairs + dpstands + dps + trees + graphs + dsus + segtrees + mixes
     all_objects = sorted(all_objects, key=lambda obj: int(obj.order))
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
 
     filtered = [obj for obj in all_objects if obj.name.startswith(query)]
     params = {'questions' : filtered}
-    return render(request , 'search.html' , params)
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'searchphone.html' , params)
+    else :
+        return render(request , 'search.html' , params)
 
 
 def brainf(request):
