@@ -17,6 +17,7 @@ urlpatterns =[
     path('Recursion', views.recursionf , name = 'recursionf'),
     path('Beginner', views.beginnerf , name = 'beginnerf'),
     path('Brute', views.brutef , name = 'brutef'),
+    path('Bit', views.bitf , name = 'bitf'),
     path('Greed', views.greedf , name = 'greedf'),
     path('Sub', views.subf , name = 'subf'),
     path('Implement', views.implementf , name = 'implementf'),

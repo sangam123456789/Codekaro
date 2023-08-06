@@ -183,7 +183,8 @@ def searchf(request) :
     dsus = list(dsu.objects.all())
     segtrees = list(segtree.objects.all())
     mixes = list(mixed.objects.all())
-    all_objects = brains + recursions + beginners + greeds + brutes + subs + implements + sorts + binaries + pointers + hashs + pairs + dpstands + dps + trees + graphs + dsus + segtrees + mixes
+    bits = list(bit.objects.all())
+    all_objects = bits + brains + recursions + beginners + greeds + brutes + subs + implements + sorts + binaries + pointers + hashs + pairs + dpstands + dps + trees + graphs + dsus + segtrees + mixes
     all_objects = sorted(all_objects, key=lambda obj: int(obj.order))
     user_agent = parse(request.META['HTTP_USER_AGENT'])
 
@@ -205,6 +206,17 @@ def brainf(request):
         return render(request , 'brainphone.html' , params)
     else :
         return render(request , 'brain.html' , params)
+
+def bitf(request):
+    user_agent = parse(request.META['HTTP_USER_AGENT'])
+    
+    bits = sorted(bit.objects.all() , key=lambda obj: int(obj.order))
+    params = {'questions' : bits}
+
+    if (user_agent.is_mobile or user_agent.is_tablet) :
+        return render(request , 'brainphone.html' , params)
+    else :
+        return render(request , 'brain.html' , params)    
     
 def recursionf(request):
     user_agent = parse(request.META['HTTP_USER_AGENT'])
