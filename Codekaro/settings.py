@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import warnings
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -88,22 +89,23 @@ WSGI_APPLICATION = 'Codekaro.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'containers-us-west-101.railway.app',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'xsXWpwCklC4ePTOii9eq',
-        'PORT': '6542',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'HOST': 'containers-us-west-101.railway.app',
+    #     'NAME': 'railway',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'xsXWpwCklC4ePTOii9eq',
+    #     'PORT': '6542',
+
+    # }       
 }
 
+DATABASES["default"] = dj_database_url.parse("postgres://codesniper_user:nDzvUD2o5kOuu6WsCUK5SCOvxncofU2s@dpg-cj7sp4s5kgrc73c4s4q0-a.oregon-postgres.render.com/codesniper")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
