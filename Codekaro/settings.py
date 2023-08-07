@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'user_agents',
     'django.contrib.admin',
     'django.contrib',
-    'dbbackup',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
