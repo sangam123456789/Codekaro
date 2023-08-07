@@ -107,7 +107,7 @@ DATABASES = {
     # }     
 
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'HOST': 'sql312.infinityfree.com',
         'NAME': 'if0_34766562_Codesniper',
         'USER': 'if0_34766562',
