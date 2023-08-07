@@ -1,0 +1,13 @@
+[
+    {
+        "model": "Home.mixed",
+        "pk": 1,
+        "fields": {
+            "order": "1",
+            "name": "Expected Destruction",
+            "description": "Do it yourself!",
+            "link": "https://codeforces.com/contest/1854/problem/C"
+        }
+    }
+    ]
+    
