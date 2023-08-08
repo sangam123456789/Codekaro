@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'user_agents',
     'django.contrib.admin',
     'django.contrib',
-    '_sqlite3',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -107,7 +106,7 @@ DATABASES = {
     # }     
 
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'HOST': 'sql312.infinityfree.com',
         'NAME': 'if0_34766562_Codesniper',
         'USER': 'if0_34766562',
