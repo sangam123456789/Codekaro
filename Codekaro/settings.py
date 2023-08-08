@@ -13,6 +13,9 @@ import os
 from pathlib import Path
 import warnings
 import dj_database_url
+import django
+from django.utils.encoding import force_str
+django.utils.encoding.force_text = force_str
 import pymysql
 pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -108,7 +111,7 @@ DATABASES = {
     # }     
 
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'HOST': 'sql312.infinityfree.com',
         'NAME': 'if0_34766562_Codesniper',
         'USER': 'if0_34766562',
