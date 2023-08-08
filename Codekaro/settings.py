@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import warnings
-import sqlite3 , _sqlite3
 import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -109,6 +108,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'HOST': 'sql312.infinityfree.com',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'if0_34766562_Codesniper',
         'USER': 'if0_34766562',
         'PASSWORD': 'n2SsJlE3Uw1WFxh',
