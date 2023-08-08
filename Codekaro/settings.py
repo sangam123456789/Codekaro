@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'Codekaro.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
@@ -122,7 +122,7 @@ DATABASES = {
   
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://codesniper_user:nDzvUD2o5kOuu6WsCUK5SCOvxncofU2s@dpg-cj7sp4s5kgrc73c4s4q0-a.oregon-postgres.render.com/codesniper")
+DATABASES["default"] = dj_database_url.parse("postgres://gaurav.singh911805:4QwKmUzRt5LT@ep-jolly-sun-27518314.ap-southeast-1.aws.neon.tech/neondb")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
