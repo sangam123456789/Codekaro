@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'user_agents',
     'django.contrib.admin',
     'django.contrib',
+    '_sqlite3',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
