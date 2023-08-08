@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib',
     'django.contrib.auth',
-    '_sqlite3',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -107,9 +106,8 @@ DATABASES = {
     # }     
 
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite',
         'HOST': 'sql312.infinityfree.com',
-        'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'if0_34766562_Codesniper',
         'USER': 'if0_34766562',
         'PASSWORD': 'n2SsJlE3Uw1WFxh',
