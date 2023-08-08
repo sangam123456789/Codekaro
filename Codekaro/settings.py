@@ -16,8 +16,8 @@ import dj_database_url
 import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
-import pymysql
-pymysql.install_as_MySQLdb()
+# import pymysql
+# pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -110,19 +110,19 @@ DATABASES = {
 
     # }     
 
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'sql312.infinityfree.com',
-        'NAME': 'if0_34766562_Codesniper',
-        'USER': 'if0_34766562',
-        'PASSWORD': 'n2SsJlE3Uw1WFxh',
-        'PORT': '3306',
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'HOST': 'sql312.infinityfree.com',
+    #     'NAME': 'if0_34766562_Codesniper',
+    #     'USER': 'if0_34766562',
+    #     'PASSWORD': 'n2SsJlE3Uw1WFxh',
+    #     'PORT': '3306',
 
-    }   
+    # }   
   
 }
 
-# DATABASES["default"] = dj_database_url.parse("postgres://codesniper_user:nDzvUD2o5kOuu6WsCUK5SCOvxncofU2s@dpg-cj7sp4s5kgrc73c4s4q0-a.oregon-postgres.render.com/codesniper")
+DATABASES["default"] = dj_database_url.parse("postgres://codesniper_user:nDzvUD2o5kOuu6WsCUK5SCOvxncofU2s@dpg-cj7sp4s5kgrc73c4s4q0-a.oregon-postgres.render.com/codesniper")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
