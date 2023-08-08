@@ -25,9 +25,9 @@ def home(request):
         variable = GlobalVariable.objects.get(variable_name=variable_name)
 
         # Increment the value
-        if User.is_superuser :
+        if request.user.is_superuser:
             variable.variable_value += 0
-        else:    
+        else:
             variable.variable_value += 1
 
     except GlobalVariable.DoesNotExist:
