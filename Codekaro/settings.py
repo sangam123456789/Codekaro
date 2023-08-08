@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib',
     'django.contrib.auth',
+    '_sqlite3',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
