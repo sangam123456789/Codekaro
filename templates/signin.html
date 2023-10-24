@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
+
 {% block signinactive %}active{% endblock signinactive %}
 {% block body %}
-  <h2 class="text-center my-0" style = "padding-top : 3.5rem;"> Please Login </h2>
-    <form class="mx-5" action="\signin" method="post">
+  <h2 class="text-center my-0 label custom-label" style = "padding-top : 3.5rem;"> Please Login </h2>
+   
+  <form class="mx-5" action="\signin" method="post">
       {% csrf_token %}
 
       <div class="form-group active">
-        <label for="Name">Username</label>
+        <label for="Name" class="label custom-label">Username</label>
         <input type="name" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter username">
         
       </div>
       
       <div class="form-group">
-        <label for="Password">Password</label>
+        <label class="label custom-label" for="Password">Password</label>
         <input type="password" class="form-control" id="pass1" name="pass1" aria-describedby="emailHelp" placeholder="Your number">
         <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
       </div>
