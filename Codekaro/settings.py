@@ -122,10 +122,13 @@ DATABASES = {
   
 }
 
+
 #neon
 # DATABASES["default"] = dj_database_url.parse("postgres://gaurav.singh911805:4QwKmUzRt5LT@ep-jolly-sun-27518314.ap-southeast-1.aws.neon.tech/neondb")
 # render
-DATABASES["default"] = dj_database_url.parse("postgres://codesniper_user:nDzvUD2o5kOuu6WsCUK5SCOvxncofU2s@dpg-cj7sp4s5kgrc73c4s4q0-a.oregon-postgres.render.com/codesniper")
+# DATABASES["default"] = dj_database_url.parse("postgres://codesniper_user:nDzvUD2o5kOuu6WsCUK5SCOvxncofU2s@dpg-cj7sp4s5kgrc73c4s4q0-a.oregon-postgres.render.com/codesniper")
+#render2
+DATABASES["default"] = dj_database_url.parse("postgres://sangamer_user:RlCjuzUjHwv05eeYQ9UNsGTCHpcuuAL4@dpg-ckub19jamefc73f92nug-a.oregon-postgres.render.com/sangamer")
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
